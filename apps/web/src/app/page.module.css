@@ -1,0 +1,144 @@
+.page {
+  width: min(1280px, calc(100% - 40px));
+  margin: 22px auto 72px;
+}
+
+.hero,
+.featureSection,
+.gallerySection {
+  border: 1px solid rgba(120, 98, 173, 0.14);
+  border-radius: 30px;
+  background: rgba(251, 248, 255, 0.72);
+  box-shadow: 0 24px 80px rgba(53, 34, 97, 0.08);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 24px;
+  padding: 28px;
+}
+
+.heroCopy h1 {
+  margin-top: 12px;
+  max-width: 11ch;
+  font-family: var(--font-display), serif;
+  font-size: clamp(2.9rem, 4.8vw, 4.9rem);
+  line-height: 0.94;
+  font-weight: 600;
+}
+
+.kicker,
+.blockLabel {
+  color: var(--accent);
+  font-size: 0.76rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.lead {
+  max-width: 56ch;
+  margin-top: 16px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.heroActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.inlineLink,
+.themeCard:hover {
+  transform: translateY(-1px);
+}
+
+.heroThemes {
+  display: grid;
+  gap: 14px;
+}
+
+.themeGrid {
+  display: grid;
+  gap: 12px;
+}
+
+.themeCard {
+  display: grid;
+  gap: 8px;
+  padding: 18px;
+  border: 1px solid rgba(120, 98, 173, 0.14);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.66);
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.inlineLink {
+  flex-shrink: 0;
+}
+
+.themeCard strong {
+  font-family: var(--font-display), serif;
+  font-size: 1.55rem;
+  line-height: 0.95;
+  font-weight: 600;
+}
+
+.themeCard span {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.featureSection,
+.gallerySection {
+  margin-top: 20px;
+  padding: 24px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: end;
+  margin-bottom: 18px;
+}
+
+.sectionHeader h2 {
+  margin-top: 10px;
+  font-family: var(--font-display), serif;
+  font-size: clamp(2.2rem, 3.5vw, 3.6rem);
+  line-height: 0.92;
+  font-weight: 600;
+}
+
+@media (max-width: 1080px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .page {
+    width: min(100% - 24px, 1280px);
+  }
+
+  .hero,
+  .featureSection,
+  .gallerySection {
+    padding: 18px;
+  }
+
+  .heroCopy h1 {
+    max-width: 12ch;
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+
+  .sectionHeader {
+    align-items: start;
+    flex-direction: column;
+  }
+}

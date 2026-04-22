@@ -1,0 +1,104 @@
+.header {
+  position: sticky;
+  top: 12px;
+  z-index: 20;
+  display: grid;
+  gap: 16px;
+  width: min(1280px, calc(100% - 40px));
+  margin: 20px auto 0;
+  padding: 18px;
+  border: 1px solid rgba(120, 98, 173, 0.16);
+  border-radius: 28px;
+  background: rgba(251, 248, 255, 0.76);
+  box-shadow: 0 24px 80px rgba(53, 34, 97, 0.14);
+  backdrop-filter: blur(18px);
+}
+
+.brandRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.brand {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  min-width: 0;
+}
+
+.brandBadge {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: white;
+  font-family: var(--font-display), serif;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.brandText {
+  display: grid;
+  gap: 2px;
+}
+
+.brandText strong {
+  font-family: var(--font-display), serif;
+  font-size: 1.2rem;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.brandText small {
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+}
+
+.nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  color: var(--muted);
+}
+
+.nav a {
+  transition: color 160ms ease;
+}
+
+.nav a:hover {
+  color: var(--text);
+}
+
+.searchWrap {
+  width: 100%;
+}
+
+.searchFallback {
+  min-height: 50px;
+  border: 1px solid rgba(120, 98, 173, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.64);
+}
+
+@media (max-width: 860px) {
+  .header {
+    width: min(100% - 24px, 1280px);
+    padding: 16px;
+  }
+
+  .brandRow {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,37 @@
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 500;
+  transition:
+    transform 160ms ease,
+    background 160ms ease,
+    border-color 160ms ease;
+}
+
+.cta:hover {
+  transform: translateY(-1px);
+}
+
+.primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: white;
+}
+
+.secondary {
+  border-color: rgba(120, 98, 173, 0.16);
+  background: rgba(255, 255, 255, 0.76);
+  color: var(--text);
+}
+
+.ghost {
+  color: var(--accent-strong);
+}
+
+.fullWidth {
+  width: 100%;
+}

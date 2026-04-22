@@ -1,0 +1,28 @@
+{
+  "name": "highmarket-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "node ./node_modules/concurrently/dist/bin/concurrently.js -n api,web -c blue,green \"npm run start:dev --workspace @highmarket/api\" \"npm run dev --workspace @highmarket/web\"",
+    "dev:all": "npm run dev",
+    "dev:api": "npm run start:dev --workspace @highmarket/api",
+    "dev:web": "npm run dev --workspace @highmarket/web",
+    "start:all": "npm run dev",
+    "start:api": "npm run start:dev --workspace @highmarket/api",
+    "start:web": "npm run dev --workspace @highmarket/web",
+    "build": "npm run build --workspace @highmarket/api && npm run build --workspace @highmarket/web",
+    "lint": "npm run lint --workspace @highmarket/api && npm run lint --workspace @highmarket/web",
+    "test": "npm run test --workspace @highmarket/api",
+    "test:e2e": "npm run test:e2e --workspace @highmarket/api",
+    "format": "npm run format --workspace @highmarket/api"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "dependencies": {
+    "language-subtag-registry": "^0.4.2"
+  }
+}
